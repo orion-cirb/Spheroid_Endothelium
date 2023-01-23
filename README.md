@@ -1,31 +1,26 @@
-* **Developed for:** Sandra
-* **Team:** Prochiantz
+* **Developed for:** Camille
+* **Team:** Monnot
 * **Date:** January 2023
 * **Software:** Fiji
 
 
 ### Images description
 
-3D images taken with a x25 objective
+3D images of vascularized spheroids taken with a confocal microscope.
 
-3 channels:
-  1. *405:* Nuclei
-  2. *488:* Lamin (not mandatory)
-  3. *561:* ORF1P
+With each image should be provided a *.zip* file containing ROIs drawn on 3 z-slices of the image:
+* a ROI named "c" for the endothelium contour
+* a ROI named "s" for the spheroid contour
+* ROIs for the contour of each lumen
 
 ### Plugin description
 
-* Detect nuclei with Cellpose
-* Compute nuclei 3D shape descriptors
-* In lamin channel (if provided), measure nuclei intensity
-* In ORF1P channel, get cytoplasm mask 
-* Measure nuclei and cytoplasm intensity
+* Compute the area of "c" and "s", their difference and their ratio
+* Compute the area and 2D shape descriptors of each lumen
 
 ### Dependencies
 
-* **3DImageSuite** Fiji plugin
-* **CLIJ** Fiji plugin
-* **Omnipose** conda environment + *cyto2* model
+None!
 
 ### Version history
 
